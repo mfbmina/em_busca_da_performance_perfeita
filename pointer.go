@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 const SIZE = 10
 
 func ReferencePassMain() {
@@ -19,8 +17,7 @@ func ReferencePassFunction(s *[SIZE]int) {
 }
 
 func ValuePassMain() {
-	s := [SIZE]int{} // aloc1
-	fmt.Println(&s)
+	s := [SIZE]int{}
 
 	for i := 0; i < SIZE; i += 1 {
 		s[i] = i
@@ -30,8 +27,6 @@ func ValuePassMain() {
 }
 
 func ValuePassFunction(s [SIZE]int) {
-	fmt.Println(&s)
-
 	for range s {
 	}
 }
